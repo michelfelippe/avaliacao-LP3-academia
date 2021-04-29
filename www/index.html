@@ -19,23 +19,18 @@
 <script src="app.js"> </script>
 <script src="controllers.js"></script>
 
-<style>
-	
-	input {
-		padding: 5px;
-		border: 1px solid #ccc;
-		background-color: #fafad2;
-		color: #000;
-	}
-	
+<style>	
 	div {
 		padding: 5px;
 	}
 	
 	a{ 
-		padding: 10px;
-		float: left;
-	
+		padding: 10px;	
+	}
+
+	#centro{
+		min-height: 600px;
+		background-color: lightblue;
 	}
 	
 </style>
@@ -43,7 +38,7 @@
 </head>
 
 <body>
-<header class="container">
+<header class="container-fluid col-12 col-md-12">
 	<div class="row">
 		<div class="col text-center bg-info">
 			<h1>Avaliação Linguagem de Programação III</h1>
@@ -56,8 +51,7 @@
 <div ng-view></div>
 
 	<footer>
-		<hr>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col text-center bg-info">
                     <h4>&trade; MichelFelippe</h4>
@@ -92,7 +86,7 @@
 		function imc(){
 			var peso1 = document.getElementById("peso").value;
 			var altura1 = document.getElementById("altura").value;
-			var calcimc = document.getElementById("calcimc");
+			var calcimc = peso1/(altura1*altura1);
 			window.localStorage.setItem("Peso", peso1);
 			window.localStorage.setItem("Altura", altura1);
 			window.localStorage.setItem("IMC", calcimc);

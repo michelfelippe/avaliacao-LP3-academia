@@ -42,7 +42,7 @@ appControllers.controller('AddClienteCtrl',['$scope','$routeParams',function($sc
 
 			$scope.npeso = $routeParams.peso;
 			$scope.naltura = $routeParams.altura;
-			$scope.nimc = $scope.npeso / ($scope.naltura * $scope.naltura);
+			$scope.nimc = $routeParams.peso / ($routeParams.altura * $routeParams.altura);
 			
 			console.log('Cheguei até aqui! IMC');
 		}]);

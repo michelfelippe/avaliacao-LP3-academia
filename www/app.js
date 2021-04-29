@@ -5,12 +5,14 @@ app.config(['$routeProvider','$locationProvider', function($routeProvider,$locat
 	$routeProvider.when('/',{templateUrl: 'partials/main.html',controller: 'MainCtrl'}).
 	when('/listacliente',{templateUrl: 'partials/listacliente.html',controller: 'ListaClienteCtrl'}).
 	when('/novocliente',{templateUrl:'partials/novocliente.html',controller:'ClienteCtrl'}).
-	when('/addcliente/:nomecliente/:cpf/:email/:idade',{templateUrl:'partials/addcliente.html',controller:'AddClienteCtrl'});
+	when('/addcliente/:nomecliente/:cpf/:email/:idade',
+	{templateUrl:'partials/addcliente.html',controller:'AddClienteCtrl'});
 
 	$routeProvider.when('/',{templateUrl: 'partials/main.html',controller: 'MainCtrl'}).
 	when('/listaexercicios',{templateUrl: 'partials/listaexercicios.html',controller: 'ListaExercicioCtrl'}).
 	when('/novoexercicio',{templateUrl:'partials/novoexercicio.html',controller:'ExercicioCtrl'}).
-	when('/addexercicio/:nomeexercicio/:tipo/:tempo/:calorias',{templateUrl:'partials/addexercicio.html',controller:'AddExercicioCtrl'});
+	when('/addexercicio/:nomeexercicio/:tipo/:tempo/:calorias',
+	{templateUrl:'partials/addexercicio.html',controller:'AddExercicioCtrl'});
 
 	$routeProvider.when('/',{templateUrl: 'partials/main.html',controller: 'MainCtrl'}).
 	when('/listaimc',{templateUrl: 'partials/listaimc.html',controller: 'ListaImcCtrl'}).
