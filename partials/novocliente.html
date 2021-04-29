@@ -1,46 +1,31 @@
-<h2>Cliente</h2>
-
-<form ng-submit="enviar()" ng-controller="ClienteCtrl">
+<div class="container text-center">
+<h2>Cadastro Cliente</h2>
+<br>
+<form class="form-group" ng-submit="enviar()" ng-controller="ClienteCtrl">
 
 	<div>
-		<label> Nome Cliente: </label>
-		<input type="text" ng-model="nomecliente">
+		<label class="font-weight-bold"> Nome Cliente: </label>
+		<input class="form-control" id="nomecliente" type="text" ng-model="nomecliente">
 	</div>
 	
 	<div>
-		<label> CPF: </label>
-		<input type="text" ng-model="cpf">
+		<label class="font-weight-bold"> CPF: </label>
+		<input class="form-control" id="cpf" type="text" ng-model="cpf">
 	</div>
 
 	<div>
-		<label> E-mail: </label>
-		<input type="email" ng-model="email">
+		<label class="font-weight-bold"> E-mail: </label>
+		<input class="form-control" id="email" type="text" ng-model="email">
 	</div>
 
 	<div>
-		<label> Idade: </label>
-		<input type="text" ng-model="idade">
-	</div>
-
-	<div>
-		<label> Endereço: </label>
-		<input type="text" ng-model="endereco">
-	</div>
-
-	<div>
-		<label> UF: </label>
-		<select name="uf" id="uf" ng-model="uf">
-			<option value="selecionar" selected disabled> Selecione uma Opção </option>
-			<optgroup label="Região Sul">
-				<option value="SC"> Santa Catarina </option>
-				<option value="PR"> Paraná </option>
-				<option value="RS"> Rio Grande do Sul </option>
-			</optgroup>
-		</select>
+		<label class="font-weight-bold"> Idade: </label>
+		<input class="form-control" id="idade" type="text" ng-model="idade">
 	</div>
 	
-	<div>
-		<button><input type="submit" value="Salvar"></button>
+	<div class="mt-5">
+		<input class="btn-dark btn-block" type="submit" value="Salvar" onclick="cliente()">
 	</div>
 	
 </form>
+</div>

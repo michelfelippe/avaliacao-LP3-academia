@@ -1,29 +1,31 @@
+<div class="container text-center">
 <h2>Exercicio</h2>
-
-<form ng-submit="enviar()" ng-controller="ExercicioCtrl">
+<br>
+<form class="form-group" ng-submit="enviar()" ng-controller="ExercicioCtrl">
 
 	<div>
-		<label> Exercício: </label>
-		<input type="text" ng-model="nomeexercicio">
+		<label class="font-weight-bold"> Exercício: </label>
+		<input class="form-control" id="nomeexercicio" type="text" ng-model="nomeexercicio">
 	</div>
 	
 	<div>
-		<label> Tipo de Exercício: </label>
-		<input type="text" ng-model="tipo">
+		<label class="font-weight-bold"> Tipo de Exercício: </label>
+		<input class="form-control" id="tipo" type="text" ng-model="tipo">
 	</div>
 
 	<div>
-		<label> Tempo do Exercício: </label>
-		<input type="text" ng-model="tempo">
+		<label class="font-weight-bold"> Tempo do Exercício: </label>
+		<input class="form-control" id="tempo" type="text" ng-model="tempo">
 	</div>
 
     <div>
-		<label> Calorias do Exercício: </label>
-		<input type="text" ng-model="calorias">
+		<label class="font-weight-bold"> Calorias do Exercício: </label>
+		<input class="form-control" id="calorias" type="text" ng-model="calorias">
 	</div>
 	
-	<div>
-		<input type="submit"  value="Salvar">
+	<div class="mt-5">
+		<input class="btn-dark btn-block" type="submit"  value="Salvar" onclick="exercicio()">
 	</div>
 	
 </form>
+</div>

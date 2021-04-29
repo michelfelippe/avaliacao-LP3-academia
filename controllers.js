@@ -1,34 +1,27 @@
 var appControllers = angular.module('controllers',[]);
 
-appControllers.controller('MainCtrl',['$scope',function($scope){
-	$scope.nome = "MARIA BBB 19";
-}]);
-	
-appControllers.controller('ListaCtrl',['$scope',function($scope){
-	$scope.nome = "JOANINHA QUEBRA BARRACOOO!";
-}]);
-
 appControllers.controller('ClienteCtrl',['$scope','$location',function($scope,$location){
 	$scope.enviar=function(){
-		$location.path('/addcliente/'+$scope.nomecliente+'/'+$scope.cpf+'/'+$scope.idade+'/'+$scope.email+'/'+$scope.endereco+'/'+$scope.uf);
-}},
-
-		appControllers.controller('ExercicioCtrl',['$scope','$location',function($scope,$location){
-			$scope.enviar=function(){
-				$location.path('/addexercicio/'+$scope.nomeexercicio+'/'+$scope.tipo+'/'+$scope.tempo+'/'+$scope.calorias);
+		$location.path('/addcliente/'+$scope.nomecliente+'/'+$scope.cpf+'/'+$scope.idade+'/'+$scope.email);
 	};
-}]),
+}]);
 
 appControllers.controller('AddClienteCtrl',['$scope','$routeParams',function($scope,$routeParams){
 
 	$scope.nnomecliente = $routeParams.nomecliente;
 	$scope.ncpf = $routeParams.cpf;
-	$scope.nemail = $routeParams.email;
-	$scope.nidade = $routeParams.idade;
-	$scope.nendereco = $routeParams.endereco;
-	$scope.nuf = $routeParams.uf;
-}]),
-	
+	$scope.nemail = $routeParams.idade;
+	$scope.nidade = $routeParams.email;
+
+	console.log('Cheguei até aqui! Cliente!');
+}]);
+
+		appControllers.controller('ExercicioCtrl',['$scope','$location',function($scope,$location){
+			$scope.enviar=function(){
+				$location.path('/addexercicio/'+$scope.nomeexercicio+'/'+$scope.tipo+'/'+$scope.tempo+'/'+$scope.calorias);
+	};
+}]);
+
 	appControllers.controller('AddExercicioCtrl',['$scope','$routeParams',function($scope,$routeParams){
 	
 		$scope.nnomeexercicio = $routeParams.nomeexercicio;
@@ -37,4 +30,19 @@ appControllers.controller('AddClienteCtrl',['$scope','$routeParams',function($sc
 		$scope.ncalorias = $routeParams.calorias;
 	
 	console.log('Cheguei até aqui! Exercicio!!!');
-	}])]);
+	}]);
+
+		appControllers.controller('ImcCtrl',['$scope','$location',function($scope,$location){
+			$scope.enviar=function(){
+				$location.path('/addimc/'+$scope.peso+'/'+$scope.altura);
+		};
+	}]);
+
+		appControllers.controller('AddImcCtrl',['$scope','$routeParams',function($scope,$routeParams){
+
+			$scope.npeso = $routeParams.peso;
+			$scope.naltura = $routeParams.altura;
+			$scope.nimc = $scope.npeso / ($scope.naltura * $scope.naltura);
+			
+			console.log('Cheguei até aqui! IMC');
+		}]);

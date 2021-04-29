@@ -1,0 +1,19 @@
+<div class="container text-center">
+<h2>Dados para Cálculo do IMC</h2>
+<br>
+<form class="form-group" ng-submit="enviar()" ng-controller="ImcCtrl">
+    <div>
+		<label class="font-weight-bold"> Peso: </label>
+		<input class="form-control" id="peso" type="text" id="peso" ng-model="peso">
+	</div>
+
+	<div>
+		<label class="font-weight-bold"> Altura: </label>
+		<input class="form-control" id="altura" type="text" id="altura" ng-model="altura">
+	</div>
+	
+	<div class="mt-5">
+		<input class="btn-dark btn-block" type="submit" value="CALCULAR" onclick="imc()">
+	</div>
+</form>
+</div>
