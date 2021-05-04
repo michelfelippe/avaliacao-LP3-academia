@@ -61,7 +61,7 @@
     </footer>
 
 	<script>
-		function cliente(){
+		function salvarcliente(){
 			var nome1 = document.getElementById("nomecliente").value;
 			var cpf1 = document.getElementById("cpf").value;
 			var email1 = document.getElementById("email").value;
@@ -72,7 +72,24 @@
 			window.localStorage.setItem("Idade", idade1);
 		}
 
-		function exercicio(){
+		function mostrarcliente(){
+			document.getElementById('mostrar').innerHTML = 
+				`<div>Nome do Cliente >>> ${window.localStorage.getItem("Nome")}</div>
+					<div>CPF >>> ${window.localStorage.getItem("CPF")}</div>
+						<div>e-mail >>> ${window.localStorage.getItem("E-mail")}</div>
+							<div>Idade >>> ${window.localStorage.getItem("Idade")}</div>`
+		}
+
+		function apagarcliente(){
+			var apagar = document.getElementById('mostrar')
+			window.localStorage.removeItem("Nome");
+			window.localStorage.removeItem("CPF");
+			window.localStorage.removeItem("E-mail");
+			window.localStorage.removeItem("Idade");
+			apagar.remove()
+		}
+
+		function salvarexercicio(){
 			var exercicio1 = document.getElementById("nomeexercicio").value;
 			var tipo1 = document.getElementById("tipo").value;
 			var tempo1 = document.getElementById("tempo").value;
@@ -82,14 +99,42 @@
 			window.localStorage.setItem("Tempo", tempo1);
 			window.localStorage.setItem("Calorias", calorias1);
 		}
+		function mostrarexercicio(){
+			document.getElementById('mostrar').innerHTML = 
+			`<div>Nome do Exercício >>> ${window.localStorage.getItem("Exercício")}<div>
+				<div>Tipo do Exercício >>> ${window.localStorage.getItem("Tipo")}<div>
+					<div>Tempo Gasto >>> ${window.localStorage.getItem("Tempo")}<div>
+						<div>Calorias Gastas >>> ${window.localStorage.getItem("Calorias")}<div>`
+		}
+		function apagarexercicio(){
+			var apagar = document.getElementById('mostrar')
+			window.localStorage.removeItem("Exercício");
+			window.localStorage.removeItem("Tipo");
+			window.localStorage.removeItem("Tempo");
+			window.localStorage.removeItem("Calorias");
+			apagar.remove()
+		}
 
-		function imc(){
+		function salvarimc(){
 			var peso1 = document.getElementById("peso").value;
 			var altura1 = document.getElementById("altura").value;
 			var calcimc = peso1/(altura1*altura1);
 			window.localStorage.setItem("Peso", peso1);
 			window.localStorage.setItem("Altura", altura1);
 			window.localStorage.setItem("IMC", calcimc);
+		}
+		function mostrarimc(){
+			document.getElementById('mostrar').innerHTML = 
+			`<div>Peso >>> ${window.localStorage.getItem("Peso")}</div>
+			<div>Altura >>> ${window.localStorage.getItem("Altura")}</div>
+			<div>Cálculo IMC >>> ${window.localStorage.getItem("IMC")}</div>`
+		}
+		function apagarimc(){
+			var apagar = document.getElementById('mostrar')
+			window.localStorage.removeItem("Peso");
+			window.localStorage.removeItem("Altura");
+			window.localStorage.removeItem("IMC");
+			apagar.remove()
 		}
 	</script>
 </body>

@@ -1,17 +1,50 @@
 <div id="centro" class="container-fluid">
+    <p class="h1 text-center">
+        Sistema Academia
+    </p>
+    <p class="h2 text-center">
+        Escolha uma das opções abaixo!
+    </p>
+<!-- Dropdown Cliente -->
 <div class="row mt-5">
     <div class="col-12 col-md-4 offset-md-4">
-        <a class="btn-dark btn-block text-center" href="#!novocliente"> Novo Cliente </a>
+        <div class="dropdown text-center">
+            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Área Cliente
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#!novocliente">Cadastro Cliente</a>
+            <a class="dropdown-item" href="#!listacliente">Lista Cliente</a>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row">
+<!-- Dropdown Exercicios -->
+<div class="row mt-5">
     <div class="col-12 col-md-4 offset-md-4">
-            <a class="btn-dark btn-block text-center" href="#!novoexercicio"> Novo Exercício </a>
+        <div class="dropdown text-center">
+            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Área Exercício
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#!novoexercicio">Cadastro Exercício</a>
+            <a class="dropdown-item" href="#!listaexercicios">Lista Exercício</a>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row">
+<!-- Dropdown IMC -->
+<div class="row mt-5">
     <div class="col-12 col-md-4 offset-md-4">
-        <a class="btn-dark btn-block text-center" href="#!calcimc"> Calculo IMC </a>
+        <div class="dropdown text-center">
+            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Área IMC
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#!calcimc">Cadastro IMC</a>
+            <a class="dropdown-item" href="#!listaimc">Lista IMC</a>
+            </div>
+        </div>
     </div>
 </div>
 </div>
