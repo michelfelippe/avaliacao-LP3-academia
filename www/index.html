@@ -101,10 +101,10 @@
 		}
 		function mostrarexercicio(){
 			document.getElementById('mostrar').innerHTML = 
-			`<div>Nome do Exercício >>> ${window.localStorage.getItem("Exercício")}<div>
-				<div>Tipo do Exercício >>> ${window.localStorage.getItem("Tipo")}<div>
-					<div>Tempo Gasto >>> ${window.localStorage.getItem("Tempo")}<div>
-						<div>Calorias Gastas >>> ${window.localStorage.getItem("Calorias")}<div>`
+			`<div>Nome do Exercício >>> ${window.localStorage.getItem("Exercício")}</div>
+				<div>Tipo do Exercício >>> ${window.localStorage.getItem("Tipo")}</div>
+					<div>Tempo Gasto >>> ${window.localStorage.getItem("Tempo")}</div>
+						<div>Calorias Gastas >>> ${window.localStorage.getItem("Calorias")}</div>`
 		}
 		function apagarexercicio(){
 			var apagar = document.getElementById('mostrar')
@@ -126,8 +126,8 @@
 		function mostrarimc(){
 			document.getElementById('mostrar').innerHTML = 
 			`<div>Peso >>> ${window.localStorage.getItem("Peso")}</div>
-			<div>Altura >>> ${window.localStorage.getItem("Altura")}</div>
-			<div>Cálculo IMC >>> ${window.localStorage.getItem("IMC")}</div>`
+				<div>Altura >>> ${window.localStorage.getItem("Altura")}</div>
+					<div>Cálculo IMC >>> ${window.localStorage.getItem("IMC")}</div>`
 		}
 		function apagarimc(){
 			var apagar = document.getElementById('mostrar')
